@@ -5,7 +5,7 @@ const WelcomeScreen = () => {
     // const image = {uri:''}
 
   return (
-        <ImageBackground style={styles.welcome} resizeMode="cover" className='flex-1 justify-center'   source={require('../assets/pexels-medhat-ayad-447592.jpg')} >
+        <ImageBackground style={styles.welcome} resizeMode="cover" className='flex-1 justify-center'   source={require('../assets/images/pexels-medhat-ayad-447592.jpg')} >
           <View style={styles.logoContainer}>
            <Image style={styles.logoImage} source={require('../assets/logo-red.png')} />
             <Text>Sell What You Don't Need</Text>
