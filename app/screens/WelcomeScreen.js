@@ -1,18 +1,21 @@
 import React from 'react'
 import { ImageBackground, View,Text ,StyleSheet, Image} from 'react-native'
+import MyButton from '../../components/MyButton'
 
 const WelcomeScreen = () => {
     // const image = {uri:''}
 
   return (
-        <ImageBackground style={styles.welcome} resizeMode="cover" className='flex-1 justify-center'   source={require('../assets/images/pexels-medhat-ayad-447592.jpg')} >
+        <ImageBackground style={styles.welcome} resizeMode="cover" blurRadius={4}  className='flex-1 justify-center'   source={require('../assets/images/pexels-medhat-ayad-447592.jpg')} >
           <View style={styles.logoContainer}>
            <Image style={styles.logoImage} source={require('../assets/logo-red.png')} />
-            <Text>Sell What You Don't Need</Text>
+            <Text className='text-xl font-semibold mt-4'>Sell What You Don't Need</Text>
           </View>
-            <View style={styles.loginBtn}>
+            <View className='w-full px-2'>
+            <MyButton bgColor='bg-amber-400'>Login</MyButton>
             </View>
-            <View style={styles.register}>
+            <View className='w-full px-2 my-4'>
+            <MyButton bgColor='bg-sky-400'>Register</MyButton>
             </View>
         </ImageBackground>
   )
