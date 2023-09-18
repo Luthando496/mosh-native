@@ -11,7 +11,7 @@ const ListDetailScreen = ({image,price,title}) => {
         <View className='p-4 space-y-2'>
       <Text className='text-sm capitalize font-bold text-gray-800'>{title}</Text>
       <Text className='text-sm text-yellow-700 capitalize font-bold '>${price}</Text>
-      <AvatarUI image={require('../assets/images/mosh.jpg')} numListings='6 listings' title='Luthando Didiza' />
+      <AvatarUI image={require('../assets/images/mosh.jpg')} subTitle='6 listings' title='Luthando Didiza' />
         </View>
     </View>
 

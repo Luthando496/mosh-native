@@ -6,6 +6,7 @@ import MyButton from './app/components/MyButton';
 import Card from './app/components/Card';
 // import {} from '@vector/'
 import ListDetailScreen from './app/screens/ListDetailScreen';
+import MessageScreen from './app/screens/MessageScreen';
 
 
 
@@ -14,8 +15,8 @@ export default function App() {
     <>
       <SafeAreaView className='flex-1'>
         <StatusBar style="dark" />
-        <ViewImageScreen />
-        
+        {/* <ViewImageScreen /> */}
+        <MessageScreen />
       </SafeAreaView>
     </>
   );
