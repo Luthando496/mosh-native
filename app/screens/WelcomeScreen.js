@@ -1,6 +1,6 @@
 import React from 'react'
 import { ImageBackground, View,Text ,StyleSheet, Image} from 'react-native'
-import MyButton from '../../components/MyButton'
+import MyButton from '../components/MyButton'
 
 const WelcomeScreen = () => {
     // const image = {uri:''}
