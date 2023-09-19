@@ -1,22 +1,37 @@
-import React from 'react'
-import { Text, View,Pressable,StyleSheet } from 'react-native'
+import React from "react";
+import { Text, View, Pressable, StyleSheet } from "react-native";
 
-const MyButton = ({onPress,children,color,bgColor}) => {
+const MyButton = ({ onPress, children, color, bgColor }) => {
   return (
-    <View className='overflow-hidden'>
-    <Pressable android_ripple={{color:"red",foreground:true}} className='w-full' style={({pressed})=> pressed && styles.pressed } onPress={onPress}>
-        <View className={`${bgColor ? bgColor : 'bg-sky-500'} px-4 py-3 rounded-full w-full'`}>
-            <Text className={`text-xl text-center ${color ? color : 'text-white'} tracking-[5px] uppercase font-medium`}>{children}</Text>
+    <View className="overflow-hidden">
+      <Pressable
+        android_ripple={{ color: "red", foreground: true }}
+        className="w-full"
+        style={({ pressed }) => pressed && styles.pressed}
+        onPress={onPress}
+      >
+        <View
+          className={`${
+            bgColor ? bgColor : "bg-sky-500"
+          } px-4 py-3 rounded-full w-full'`}
+        >
+          <Text
+            className={`text-xl text-center ${
+              color ? color : "text-white"
+            } tracking-[5px] uppercase font-medium`}
+          >
+            {children}
+          </Text>
         </View>
-    </Pressable>
+      </Pressable>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
-    pressed:{
-        opacity:0.5,
-    }
-})
+  pressed: {
+    opacity: 0.5,
+  },
+});
 
-export default MyButton
+export default MyButton;

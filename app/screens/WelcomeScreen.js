@@ -3,7 +3,6 @@ import { ImageBackground, View,Text ,StyleSheet, Image} from 'react-native'
 import MyButton from '../components/MyButton'
 
 const WelcomeScreen = () => {
-    // const image = {uri:''}
 
   return (
         <ImageBackground style={styles.welcome} resizeMode="cover" blurRadius={4}  className='flex-1 justify-center'   source={require('../assets/images/pexels-medhat-ayad-447592.jpg')} >
