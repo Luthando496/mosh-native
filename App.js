@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-gesture-handler';
 import { StyleSheet,SafeAreaView } from 'react-native';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import ViewImageScreen from './app/screens/ViewImageScreen';
+// import WelcomeScreen from './app/screens/WelcomeScreen';
+// import ViewImageScreen from './app/screens/ViewImageScreen';
 import MyButton from './app/components/MyButton';
 import Card from './app/components/Card';
 import ListDetailScreen from './app/screens/ListDetailScreen';
