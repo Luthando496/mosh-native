@@ -17,30 +17,38 @@ import AppPicker from "./app/components/AppPicker";
 import { useState } from "react";
 import LoginScreen from "./app/screens/LoginScreen";
 import ListingEditScreen from "./app/screens/ListingEditScreen";
+import ImageInput from "./app/ImageInput";
+import ImageInputList from "./app/components/ImageInputList";
+import {Alert} from 'react-native'
 
-const categories = [
-  {
-    label: "Furniture",
-    value: 1,
-  },
-  {
-    label: "Clothing",
-    value: 2,
-  },
-  {
-    label: "Electronics",
-    value: 3,
-  },
-];
 
 export default function App() {
-  const [category, setCategory] = useState(categories[1]);
+  const [imageUrls, setImage] = useState([]);
+
+
+    const handlerAdd=(uri)=>{
+      setImage((prev)=> [...prev,uri])
+    }
+
+    const handleRemove=(uri)=>{
+      Alert.alert('Remove Image','Are you sure you want to remove this image?',[{text:'Yes',onPress:()=>setImage(imageUrls.filter(url=> url !== uri))},{text:'No'}])
+      
+    }
+
+//   const removeImageHandler =()=>{
+//     if(!imageUrls) {
+//       pickImage()
+//   }else{
+//     Alert.alert('Remove Image','Are you sure you want to remove this image?',[{text:'Yes',onPress:()=>setImage(null)},{text:'No'}])
+//   }
+// }
   return (
     <>
       <SafeAreaView style={styles.container}>
         <StatusBar style="dark" />
         <GestureHandlerRootView style={{ flex: 1 }}>
-          <ListingEditScreen  />
+        <ImageInputList onAddImage={handlerAdd} onRemoveImage={handleRemove} imageUri={imageUrls} />
+          {/* <ListingEditScreen  /> */}
         </GestureHandlerRootView>
       </SafeAreaView>
     </>
